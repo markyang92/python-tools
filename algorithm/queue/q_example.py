@@ -3,8 +3,11 @@
 import queue
 
 if __name__ == '__main__':
-    Q=queue.Queue(maxsize=1)
-    Q.put(1)
-    Q.get()
-    print(Q.task_done())
+    Q=queue.Queue(1)
+    try:
+        item=Q.get_nowait()
+    except queue.Empty:
+        print("Queue is empty")
+    else:
+        print(item)
 

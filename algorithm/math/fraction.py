@@ -4,31 +4,32 @@ import sys
 N_LIST=[]
 
 def gen(N:int):
+    global N_LIST
+    insert=True
     for i in range(1,N+1):
         for j in range(1,i):
-            yield N_LIST.append((f'{j}/{i}',j/i))
+            for k in range(0, len(N_LIST)):
+                if abs(N_LIST[k][1] - j/i) <= 0.0:
+                    insert=False
+                    break
+            if insert:
+                yield N_LIST.append((f'{j}/{i}',j/i))
+                N_LIST=sorted(N_LIST,key=lambda x: x[1])
+            insert=True
 
-def gen(arg_list: list):
-    for i in len(arg_list):
-        yield arg_list[i]
-
-
-def iamGenerator(N: int):
+def printer():
+    global N_LIST
+    len_list=len(N_LIST)
+    for i in range(0,len_list):
+        yield N_LIST[i][0]
 
 
 if __name__ == '__main__':
-    for i in iamGenerator(10):
-
-
-    """
     readl=sys.stdin.readline
     N=int(readl())
     for i in gen(N):
         pass
-    print(N_LIST)
-    N_LIST=sorted(N_LIST,key=lambda x: x[1])
-
-    for i in xrange(10):
+    print("0/1")
+    for i in printer():
         print(i)
-    """
-
+    print("1/1")
