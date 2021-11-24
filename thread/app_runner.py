@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-
 import subprocess
 import threading
+import os
 
 class AppRunner(threading.Thread):
     def __init__(self, cmd: str):
