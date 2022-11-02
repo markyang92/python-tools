@@ -1,0 +1,13 @@
+PN: which
+PV: 2.21
+PR: r3
+PKGV: 2.21
+PKGR: r3
+LICENSE: GPL-3.0-or-later
+DESCRIPTION:which-src: Which is a utility that prints out the full path of the executables that bash(1) would execute when the passed program names would have been entered on the shell prompt. It does this by using the exact same algorithm as bash.  This package contains sources for debugging purposes.
+SUMMARY:which-src: Displays the full path of shell commands - Source files
+SECTION:which-src: devel
+PKG:which-src: which-src
+FILES:which-src: /usr/src/debug
+FILES_INFO:which-src: {"/usr/src/debug/which/2.21-r3/which-2.21/bash.c": 13140, "/usr/src/debug/which/2.21-r3/which-2.21/bash.h": 736, "/usr/src/debug/which/2.21-r3/which-2.21/getopt.h": 4588, "/usr/src/debug/which/2.21-r3/which-2.21/sys.h": 982, "/usr/src/debug/which/2.21-r3/which-2.21/tilde/tilde.c": 13226, "/usr/src/debug/which/2.21-r3/which-2.21/tilde/tilde.h": 3167, "/usr/src/debug/which/2.21-r3/which-2.21/tilde/xmalloc.h": 1341, "/usr/src/debug/which/2.21-r3/which-2.21/which.c": 16684}
+PKGSIZE:which-src: 53864

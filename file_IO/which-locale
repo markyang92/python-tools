@@ -1,0 +1,13 @@
+PN: which
+PV: 2.21
+PR: r3
+PKGV: 2.21
+PKGR: r3
+LICENSE: GPL-3.0-or-later
+DESCRIPTION: Which is a utility that prints out the full path of the executables that bash(1) would execute when the passed program names would have been entered on the shell prompt. It does this by using the exact same algorithm as bash.
+SUMMARY: Displays the full path of shell commands
+SECTION: libs
+PKG:which-locale: which-locale
+FILES:which-locale: /usr/share/locale
+FILES_INFO:which-locale: {}
+PKGSIZE:which-locale: 0

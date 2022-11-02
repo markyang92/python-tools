@@ -1,0 +1,20 @@
+PN: which
+PV: 2.21
+PR: r3
+PKGV: 2.21
+PKGR: r3
+LICENSE: GPL-3.0-or-later
+DESCRIPTION: Which is a utility that prints out the full path of the executables that bash(1) would execute when the passed program names would have been entered on the shell prompt. It does this by using the exact same algorithm as bash.
+SUMMARY: Displays the full path of shell commands
+RDEPENDS:which: update-alternatives-opkg glibc (>= 2.35)
+SECTION: libs
+PKG:which: which
+FILES:which: /usr/bin/* /usr/sbin/* /usr/libexec/* /usr/lib/lib*.so.*             /etc /com /var             /bin/* /sbin/*             /lib/*.so.*             /lib/udev /usr/lib/udev             /lib/udev /usr/lib/udev             /usr/share/which /usr/lib/which/*             /usr/share/pixmaps /usr/share/applications             /usr/share/idl /usr/share/omf /usr/share/sounds             /usr/lib/bonobo/servers
+FILES_INFO:which: {"/usr/bin/which.which": 31360}
+pkg_postinst:which: #!/bin/sh\nset -e\n\tupdate-alternatives --install /usr/bin/which which /usr/bin/which.which 100\n
+pkg_prerm:which: #!/bin/sh\nset -e\n\tupdate-alternatives --remove  which /usr/bin/which.which\n
+FILERPROVIDESFLIST:which:  /usr/bin/which.which
+FILERPROVIDES:/usr/bin/which.which:which:  /usr/bin/which
+FILERDEPENDSFLIST:which: /usr/bin/which.which
+FILERDEPENDS:/usr/bin/which.which:which:  libc.so.6(GLIBC_2.3)(64bit) libc.so.6(GLIBC_2.14)(64bit) libc.so.6(GLIBC_2.33)(64bit) libc.so.6(GLIBC_2.3.4)(64bit) libc.so.6(GLIBC_2.4)(64bit) libc.so.6(GLIBC_2.34)(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6()(64bit) rtld(GNU_HASH)
+PKGSIZE:which: 31360

@@ -1,0 +1,15 @@
+PN: which
+PV: 2.21
+PR: r3
+PKGV: 2.21
+PKGR: r3
+LICENSE: GPL-3.0-or-later
+DESCRIPTION:which-dbg: Which is a utility that prints out the full path of the executables that bash(1) would execute when the passed program names would have been entered on the shell prompt. It does this by using the exact same algorithm as bash.  This package contains ELF symbols and related sources for debugging purposes.
+SUMMARY:which-dbg: Displays the full path of shell commands - Debugging files
+RRECOMMENDS:which-dbg: glibc-dbg
+SECTION:which-dbg: devel
+PKG:which-dbg: which-dbg
+ALLOW_EMPTY:which-dbg: 1
+FILES:which-dbg: /usr/lib/debug /usr/lib/debug-static /usr/src/debug
+FILES_INFO:which-dbg: {"/usr/bin/.debug/which.which": 67336}
+PKGSIZE:which-dbg: 67336

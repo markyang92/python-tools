@@ -1,0 +1,16 @@
+PN: which
+PV: 2.21
+PR: r3
+PKGV: 2.21
+PKGR: r3
+LICENSE: GPL-3.0-or-later
+DESCRIPTION:which-dev: Which is a utility that prints out the full path of the executables that bash(1) would execute when the passed program names would have been entered on the shell prompt. It does this by using the exact same algorithm as bash.  This package contains symbolic links, header files, and related items necessary for software development.
+SUMMARY:which-dev: Displays the full path of shell commands - Development files
+RDEPENDS:which-dev: which (= 2.21-r3)
+RRECOMMENDS:which-dev: glibc-dev update-alternatives-opkg-dev
+SECTION:which-dev: devel
+PKG:which-dev: which-dev
+ALLOW_EMPTY:which-dev: 1
+FILES:which-dev: /usr/include /lib/lib*.so /usr/lib/lib*.so /usr/lib/*.la                 /usr/lib/*.o /usr/lib/pkgconfig /usr/share/pkgconfig                 /usr/share/aclocal /lib/*.o                 /usr/lib/which/*.la /lib/*.la                 /usr/lib/cmake /usr/share/cmake
+FILES_INFO:which-dev: {}
+PKGSIZE:which-dev: 0

@@ -1,0 +1,18 @@
+PN: which
+PV: 2.21
+PR: r3
+PKGV: 2.21
+PKGR: r3
+LICENSE: GPL-3.0-or-later
+DESCRIPTION:which-doc: Which is a utility that prints out the full path of the executables that bash(1) would execute when the passed program names would have been entered on the shell prompt. It does this by using the exact same algorithm as bash.  This package contains documentation.
+SUMMARY:which-doc: Displays the full path of shell commands - Documentation files
+RDEPENDS:which-doc: update-alternatives-opkg
+SECTION:which-doc: doc
+PKG:which-doc: which-doc
+FILES:which-doc: /usr/share/doc /usr/share/man /usr/share/info /usr/share/gtk-doc             /usr/share/gnome/help
+FILES_INFO:which-doc: {"/usr/share/info/which.info": 7546, "/usr/share/man/man1/which.1.which": 3610}
+pkg_postinst:which-doc: #!/bin/sh\nset -e\n\tupdate-alternatives --install /usr/share/man/man1/which.1 which.1 /usr/share/man/man1/which.1.which 100\n
+pkg_prerm:which-doc: #!/bin/sh\nset -e\n\tupdate-alternatives --remove  which.1 /usr/share/man/man1/which.1.which\n
+FILERPROVIDESFLIST:which-doc:  /usr/share/man/man1/which.1.which
+FILERPROVIDES:/usr/share/man/man1/which.1.which:which-doc:  /usr/share/man/man1/which.1
+PKGSIZE:which-doc: 11156
